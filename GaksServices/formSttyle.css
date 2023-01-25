@@ -1,0 +1,282 @@
+@font-face {
+    font-family: Avenir-Roman;
+    src: url(Avenir-Font/avenir_ff/AvenirLTStd-Roman.otf);
+
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(Avenir-Font/avenir_ff/AvenirLTStd-Black.otf);
+}
+
+body {
+    font-family: Avenir-Roman;
+    background-color: transparent;
+    width: 100vw;
+}
+
+
+.formClass {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.right {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* grid-row: 1/2; */
+}
+
+.left {
+    /* background-color: yellowgreen; */
+    grid-column: 1/3;
+    grid-row: 1/2;
+    /* margin: 4em 0; */
+    background-image: url(images/modern-shaker-style-kitchen.jpg);
+    background-size: cover;
+    background-position: 100% 70%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome {
+    width: 700px;
+    height: 100px;
+    color: white;
+    font-size: large;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.138);
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 5px 10px rgba(211, 211, 211, 0.333);
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: Avenir;
+    font-size: 40px;
+    text-align: center;
+}
+
+form {
+    padding-bottom: 4em;
+    margin-bottom: 4em;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* justify-content: space-between; */
+    /* background-color: yellowgreen; */
+    /* overflow-x: hidden; */
+    width: 400px;
+    /* height: 400px; */
+    /* gap: 0em; */
+}
+
+input {
+    border: none;
+    /* border-bottom: solid 5px rgb(65, 64, 64); */
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    height: 40px;
+    margin: auto 0;
+    outline: none;
+}
+
+
+
+
+.name::before,
+.email::before,
+.surname::before {
+    transition: all ease .2s;
+    content: '';
+    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    width: 10%;
+    height: 4px;
+    transform: translateX(-100%);
+}
+
+.name:hover:before,
+.email:hover:before,
+.surname:hover:before {
+    transition: all ease .2;
+    width: 100%;
+    transform: translateX(0);
+}
+
+.name,
+.surname,
+.email {
+    transition: all ease;
+    height: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* margin: 1em 0; */
+    grid-template-columns: 1fr 3fr;
+    margin-top: -1em;
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+#name,
+#surname,
+#email {
+    grid-column: 1/4;
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+
+.labelName,
+.labelSurname,
+.labelEmail {
+    transition: all ease .3s;
+    grid-column: 1/2;
+    margin: auto;
+    position: absolute;
+    bottom: 10px;
+    padding-left: 5px;
+    /* transform: translateY(-35px); */
+}
+
+.surname {
+    grid-row: 2/3;
+}
+
+.email {
+    grid-row: 1/2;
+    transform: translateX(110%);
+}
+
+#submit {
+    overflow: hidden;
+    grid-column: 1/3;
+    width: 80%;
+    height: 30px;
+    margin: auto;
+    background-color: transparent;
+    color: black;
+    border-style: none;
+    border: solid 2px black;
+    font-weight: 800;
+    position: relative;
+    transform: translateX(120%);
+}
+
+#submit:hover {
+    transition: all ease .3s;
+    color: white;
+}
+
+#submit::after {
+    transition: all ease .3s;
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -3;
+    transform: translateX(-130%);
+    width: 100%;
+
+}
+
+#submit:hover:after {
+    transition: all ease .3s;
+    transform: translateX(0);
+
+    width: 100%;
+}
+
+.parentSlider {
+    grid-column: 1/3;
+    height: 50px;
+    /* box-sizing: border-box; */
+    /* border: solid 5px coral; */
+    position: relative;
+}
+
+.sliderBtn {
+    transition: all ease .2s;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: black;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border-style: none;
+    padding-top: 0;
+    /* animation: slidyBtn 30s alternate-reverse ease 0s infinite; */
+
+}
+
+.sliderBtn:hover {
+    transition: all ease .2s;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: aqua;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border-style: none;
+    padding-top: 0;
+    animation: slidyBtn .4s alternate-reverse ease 0s forwards;
+}
+
+.sliderBtn::after {
+    content: '';
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-image: url(images/forward.png);
+    z-index: 43;
+    /* background-color: white; */
+}
+
+@keyframes slidyBtn {
+
+    0% {
+        /* width: 50px; */
+        padding-right: 0;
+    }
+
+    30% {
+        /* width: 30px; */
+        transform: scale(.7);
+
+    }
+
+    100% {
+        /* width: 40px; */
+
+        transform: scale(.8);
+    }
+
+}
