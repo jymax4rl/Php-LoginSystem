@@ -11,6 +11,10 @@ let inputName = document.querySelector('#name');
 let inputSurname = document.querySelector('#surname');
 let inputEmail = document.querySelector('#email');
 
+let nameParentDiv = document.querySelector(".name");
+let surnameParentDiv = document.querySelector(".surname");
+let emailParentDiv = document.querySelector(".email");
+
 
 let onclick = inputName.getAttribute('onclick');
 let blurred = inputName.getAttribute('blur');
@@ -68,7 +72,12 @@ blur(inputEmail, labelEmail);
 let sliderButton = document.querySelector('.sliderBtn');
 
 sliderButton.addEventListener('click', function () {
-    inputName.style.transform = 'translateX(-100%)';
+    nameParentDiv.style.transform = 'translateX(-110%)';
+    nameParentDiv.style.transition = 'ease .3s all';
+    surnameParentDiv.style.transform = 'translateX(-110%)';
+    surnameParentDiv.style.transition = 'ease .3s all';
+    emailParentDiv.style.transform = 'translateX(0%)';
+    emailParentDiv.style.transition = 'ease .3s all';
     labelName.style.transform = 'translateX(-100px)';
     console.log('clicked the slider Button')
 })

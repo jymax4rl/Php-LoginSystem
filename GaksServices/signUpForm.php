@@ -30,10 +30,25 @@
                     <label class="labelEmail" for="email">Email</label>
                     <input type="email" name="email" id="email">
                 </div>
+
+                <div class="pwords">
+                    <div class="pwd">
+                        <label class="labelPwd" for="pwdInput">password</label>
+                        <input type="password" name="pwd" id="pwdInput">
+                    </div>
+
+                    <div class="pwdVerification">
+                        <label class="labelPwdVerification" for="pwd">Re-type password</label>
+                        <input type="password" name="pwd" id="pwdVerifInput">
+                    </div>
+                </div>
+
+
                 <button id="submit" type="submit">submit</button>
+
+                <!-- button to slidee the form -->
                 <div class="parentSlider">
                     <div class="sliderBtn">
-
                     </div>
                 </div>
             </form>
