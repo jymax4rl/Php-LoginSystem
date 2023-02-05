@@ -203,6 +203,7 @@ input {
 }
 
 #submit {
+    cursor: pointer;
     overflow: hidden;
     grid-column: 1/3;
     width: 80%;
@@ -220,6 +221,7 @@ input {
 #submit:hover {
     transition: all ease .3s;
     color: white;
+    text-shadow: 0px 0px 5px lightgray;
 }
 
 #submit::after {
@@ -235,12 +237,19 @@ input {
     width: 100%;
 
 }
+#submit:active{
+    text-shadow:none;
+}
+
+#submit:active:after{
+    background-color: #4f4e4e;
+}
 
 #submit:hover:after {
     transition: all ease .3s;
-    transform: translateX(0);
+    transform: translateX(0%);
 
-    width: 100%;
+    width: 110%;
 }
 
 .parentSlider {

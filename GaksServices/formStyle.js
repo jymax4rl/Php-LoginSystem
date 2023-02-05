@@ -17,12 +17,14 @@ let inputEmail = document.querySelector('#email');
 let inputPassword = document.querySelector('#pwdInput');
 let inputPassWordVerif = document.querySelector('#pwdVerifInput');
 
-
+//target divs
 let nameParentDiv = document.querySelector(".name");
 let surnameParentDiv = document.querySelector(".surname");
 let emailParentDiv = document.querySelector(".email");
 let passwordBlock = document.querySelector('.pwords');
 
+// target submit button
+let submitFormBtn = document.querySelector('#submit');
 
 let onclick = inputName.getAttribute('onclick');
 let blurred = inputName.getAttribute('blur');
@@ -82,15 +84,26 @@ blur(inputPassWordVerif, passWordVerifLabel);
 //code to slide the form
 
 let sliderButton = document.querySelector('.sliderBtn');
+let sliderBtnParent = document.querySelector('.parentSlider');
 
 sliderButton.addEventListener('click', function () {
+
     nameParentDiv.style.transform = 'translateX(-110%)';
     nameParentDiv.style.transition = 'ease .3s all';
+
     surnameParentDiv.style.transform = 'translateX(-110%)';
     surnameParentDiv.style.transition = 'ease .3s all';
+
     emailParentDiv.style.transform = 'translateX(0%)';
     emailParentDiv.style.transition = 'ease .3s all';
+
     passwordBlock.style.transform = 'translateX(0%)';
     passwordBlock.style.transition = 'ease .3s all';
+
+    sliderBtnParent.style.transform = 'scale(0)';
+    sliderBtnParent.style.transition = 'ease .05s all';
+
+
+    submitFormBtn.style.transform = 'translateX(0%)';
     console.log('clicked the slider Button')
 })
