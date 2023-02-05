@@ -1,19 +1,27 @@
+// target the input labels
 let labelName = document.querySelector('.name>label');
 labelName.style.color = 'white';
-
 let labelSurname = document.querySelector('.surname>label');
 labelSurname.style.color = 'white';
-
 let labelEmail = document.querySelector('.email>label');
 labelEmail.style.color = 'white';
+let passwordLabel = document.querySelector('.pwd >label');
+passwordLabel.style.color ='white';
+let passWordVerifLabel = document.querySelector('.pwdVerification >label');
+passWordVerifLabel.style.color ='white';
 
+// target inputs
 let inputName = document.querySelector('#name');
 let inputSurname = document.querySelector('#surname');
 let inputEmail = document.querySelector('#email');
+let inputPassword = document.querySelector('#pwdInput');
+let inputPassWordVerif = document.querySelector('#pwdVerifInput');
+
 
 let nameParentDiv = document.querySelector(".name");
 let surnameParentDiv = document.querySelector(".surname");
 let emailParentDiv = document.querySelector(".email");
+let passwordBlock = document.querySelector('.pwords');
 
 
 let onclick = inputName.getAttribute('onclick');
@@ -29,8 +37,6 @@ function clicked(inputArg, labelArg) {
         console.log(onclick);
 
         if (onclick) {
-
-
 
             labelArg.style.transition = "all ease .3s";
             labelArg.style.transform = "translateY(-35px)";
@@ -58,10 +64,16 @@ function blur(inputArg, labelArg) {
 clicked(inputName, labelName);
 clicked(inputSurname, labelSurname);
 clicked(inputEmail, labelEmail);
+clicked(inputPassword, passwordLabel);
+clicked(inputPassWordVerif, passWordVerifLabel);
+
+
 
 blur(inputName, labelName);
 blur(inputSurname, labelSurname);
 blur(inputEmail, labelEmail);
+blur(inputPassword, passwordLabel);
+blur(inputPassWordVerif, passWordVerifLabel);
 
 
 
@@ -78,6 +90,7 @@ sliderButton.addEventListener('click', function () {
     surnameParentDiv.style.transition = 'ease .3s all';
     emailParentDiv.style.transform = 'translateX(0%)';
     emailParentDiv.style.transition = 'ease .3s all';
-    labelName.style.transform = 'translateX(-100px)';
+    passwordBlock.style.transform = 'translateX(0%)';
+    passwordBlock.style.transition = 'ease .3s all';
     console.log('clicked the slider Button')
 })
