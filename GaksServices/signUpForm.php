@@ -14,11 +14,11 @@
 <body>
     <main class="formClass">
         <section class="right">
-            <form action="#" method="post">
+            <form action="includes/signup.inc.php" method="post">
 
                 <div class="name">
                     <label class="labelName" for="name">Name</label>
-                    <input type="text" name="name" id="name">
+                    <input autocomplete="off" type="text" name="name" id="name">
                 </div>
 
                 <div class="surname">
@@ -28,23 +28,23 @@
 
                 <div class="email">
                     <label class="labelEmail" for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input autocomplete="off" type="email" name="email" id="email">
                 </div>
 
                 <div class="pwords">
                     <div class="pwd">
                         <label class="labelPwd" for="pwdInput">password</label>
-                        <input type="password" name="pwd" id="pwdInput">
+                        <input autocomplete="off" type="password" name="pwd" id="pwdInput">
                     </div>
 
                     <div class="pwdVerification">
                         <label class="labelPwdVerification" for="pwd">Re-type password</label>
-                        <input type="password" name="pwd" id="pwdVerifInput">
+                        <input autocomplete="off" type="password" name="pwdRepeat" id="pwdVerifInput">
                     </div>
                 </div>
 
 
-                <button id="submit" type="submit">submit</button>
+                <button id="submit" name="submit" type="submit">submit</button>
 
                 <!-- button to slidee the form -->
                 <div class="parentSlider">
